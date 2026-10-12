@@ -402,16 +402,24 @@
       background: #fff;
     }
     
-    #leadership .visual img.startup-img {
-      transform: scale(1.15);
-      object-fit: contain;
-      object-position: center;
+
+    /* Leadership images */
+    #leadership .visual {
+      width: 175px;
+      height: 120px;
+      padding: 0;
+      overflow: hidden;
+      border-radius: 10px;
     }
     
-    #leadership .visual img.equity-img {
-      transform: scale(1.18);
+    #leadership .visual img {
+      display: block;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       object-position: center;
+      background: transparent;
+      transform: none;
     }
 
     .intro-note {
