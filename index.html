@@ -25,8 +25,13 @@
       --bg: #fcfaf8;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -38,8 +43,16 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { color: var(--accent-dark); text-decoration: underline; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
+
     a:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 4px;
@@ -52,7 +65,9 @@
       padding: 72px 42px 100px;
     }
 
-    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
 
     h1 {
       font-family: "Fraunces", Georgia, serif;
@@ -63,7 +78,10 @@
       margin-bottom: 24px;
     }
 
-    h1 em { color: var(--pink); font-weight: 500; }
+    h1 em {
+      color: var(--pink);
+      font-weight: 500;
+    }
 
     h1::after {
       content: "";
@@ -92,9 +110,12 @@
       margin: 0 0 4px;
     }
 
-    p { margin-bottom: 15px; }
+    p {
+      margin-bottom: 15px;
+    }
 
-    /* Introduction */
+    /* INTRODUCTION */
+
     .intro {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 215px;
@@ -112,7 +133,10 @@
       margin-bottom: 22px;
     }
 
-    .intro p { max-width: 650px; line-height: 1.8; }
+    .intro p {
+      max-width: 650px;
+      line-height: 1.8;
+    }
 
     .avatar {
       width: 215px;
@@ -123,7 +147,7 @@
       border: 6px solid #fff;
       box-shadow:
         0 0 0 2px var(--pink-line),
-        12px 13px 0 -4px #f3e4ea;
+        7px 7px 0 -3px #f3e4ea;
     }
 
     .links {
@@ -146,9 +170,13 @@
       text-decoration: underline;
     }
 
-    .links span { color: var(--pink); margin: 0 12px; }
+    .links span {
+      color: var(--pink);
+      margin: 0 12px;
+    }
 
-    /* Navigation */
+    /* NAVIGATION */
+
     .nav {
       display: flex;
       flex-wrap: wrap;
@@ -171,7 +199,8 @@
       text-decoration: none;
     }
 
-    /* Sections */
+    /* SECTIONS */
+
     section {
       scroll-margin-top: 28px;
       margin-top: 76px;
@@ -193,10 +222,21 @@
       flex-shrink: 0;
     }
 
-    #experience .section-heading::before { content: "01"; }
-    #projects .section-heading::before { content: "02"; }
-    #leadership .section-heading::before { content: "03"; }
-    #skills .section-heading::before { content: "04"; }
+    #experience .section-heading::before {
+      content: "01";
+    }
+
+    #projects .section-heading::before {
+      content: "02";
+    }
+
+    #leadership .section-heading::before {
+      content: "03";
+    }
+
+    #skills .section-heading::before {
+      content: "04";
+    }
 
     .section-heading::after {
       content: "";
@@ -204,14 +244,17 @@
       flex: 1;
       align-self: center;
       background: linear-gradient(
-        90deg, var(--pink-line), var(--rule) 80%
+        90deg,
+        var(--pink-line),
+        var(--rule) 80%
       );
     }
 
-    /* General entries */
+    /* GENERAL ENTRIES */
+
     .entry {
       display: grid;
-      grid-template-columns: 155px minmax(0, 1fr);
+      grid-template-columns: 175px minmax(0, 1fr);
       gap: 25px;
       padding: 22px 0 29px;
     }
@@ -228,7 +271,8 @@
       line-height: 1.75;
     }
 
-    /* Company logos */
+    /* COMPANY LOGOS */
+
     .company-logo {
       width: 76px;
       height: 76px;
@@ -245,7 +289,9 @@
       position: static;
     }
 
-    .company-logo.goldman { background: #719bc6; }
+    .company-logo.goldman {
+      background: #719bc6;
+    }
 
     .company-logo.goldman img {
       width: 100%;
@@ -266,7 +312,8 @@
       transform: none;
     }
 
-    /* Experience */
+    /* EXPERIENCE */
+
     #experience .entry {
       grid-template-columns: 76px minmax(0, 1fr);
       gap: 24px;
@@ -276,9 +323,18 @@
       border-bottom: 1px solid var(--rule);
     }
 
-    #experience .entry:last-child { border-bottom: none; }
-    #experience h3 { font-size: 18px; margin-bottom: 3px; }
-    #experience .meta { margin-bottom: 14px; }
+    #experience .entry:last-child {
+      border-bottom: none;
+    }
+
+    #experience h3 {
+      font-size: 18px;
+      margin-bottom: 3px;
+    }
+
+    #experience .meta {
+      margin-bottom: 14px;
+    }
 
     #experience .entry p {
       font-size: 15px;
@@ -286,10 +342,11 @@
       max-width: 760px;
     }
 
-    /* Project visuals */
+    /* PROJECT AND LEADERSHIP IMAGES */
+
     .visual {
-      width: 155px;
-      height: 108px;
+      width: 175px;
+      height: 120px;
       background: #f1f6f6;
       border: 1px solid #e2e9e9;
       border-radius: 10px;
@@ -297,7 +354,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 15px;
+      padding: 0;
       position: relative;
       overflow: hidden;
     }
@@ -314,16 +371,35 @@
 
     .visual span {
       font-size: 13px;
-      font-weight: 650;
+      font-weight: 600;
       color: #47687a;
     }
 
     .visual img {
-      position: absolute;
-      inset: 0;
+      display: block;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    /* Remove decorative stripe when an image is present */
+    .visual:has(img)::before {
+      display: none;
+    }
+
+    /* Project screenshots */
+    #projects .visual img {
+      object-fit: contain;
+      object-position: center;
+      background: #fff;
+    }
+
+    /* Leadership logos and images */
+    #leadership .visual img {
+      object-fit: contain;
+      object-position: center;
+      background: #fff;
     }
 
     .intro-note {
@@ -333,16 +409,21 @@
       margin-bottom: 24px;
     }
 
-    /* Project cards */
+    /* PROJECT CARDS */
+
     #projects .entry {
+      grid-template-columns: 175px minmax(0, 1fr);
+      align-items: center;
       background: #fff;
       border: 1px solid #ece5e7;
       border-radius: 15px;
-      padding: 25px;
+      padding: 20px;
       margin-bottom: 18px;
       gap: 25px;
       box-shadow: 0 4px 20px rgba(38,49,59,.025);
-      transition: transform .2s ease, border-color .2s ease;
+      transition:
+        transform .2s ease,
+        border-color .2s ease;
     }
 
     #projects .entry:hover {
@@ -351,15 +432,25 @@
     }
 
     #projects .visual.project {
-      background: linear-gradient(135deg, #f9edf2, #e6f0f2);
+      background: linear-gradient(
+        135deg,
+        #f9edf2,
+        #e6f0f2
+      );
       border: none;
       border-radius: 10px;
     }
 
-    #projects .visual.project::before { background: var(--pink); }
-    #projects h3 { margin-bottom: 7px; }
+    #projects .visual.project::before {
+      background: var(--pink);
+    }
 
-    /* Project and artifact links */
+    #projects h3 {
+      margin-bottom: 7px;
+    }
+
+    /* PROJECT LINKS */
+
     .project-links {
       display: flex;
       flex-wrap: wrap;
@@ -373,7 +464,7 @@
       font-weight: 600;
       color: var(--accent);
       text-decoration: none;
-      transition: color .2s ease;
+      transition: color 0.2s ease;
     }
 
     .project-links a::after {
@@ -388,22 +479,30 @@
       text-underline-offset: 4px;
     }
 
-    /* Leadership */
+    /* LEADERSHIP */
+
     #leadership .entry {
+      grid-template-columns: 175px minmax(0, 1fr);
+      gap: 25px;
       padding: 22px 0 29px;
       border-bottom: 1px solid var(--rule);
     }
 
-    #leadership .entry:last-child { border-bottom: none; }
+    #leadership .entry:last-child {
+      border-bottom: none;
+    }
 
     #leadership .visual {
       background: #f8eff3;
       border: 1px solid #efdee5;
     }
 
-    #leadership .visual::before { background: var(--pink); }
+    #leadership .visual::before {
+      background: var(--pink);
+    }
 
-    /* Skills */
+    /* SKILLS */
+
     .skill-row {
       display: grid;
       grid-template-columns: 150px 1fr;
@@ -418,9 +517,12 @@
       font-weight: 650;
     }
 
-    .skill-row:last-child { border-bottom: none; }
+    .skill-row:last-child {
+      border-bottom: none;
+    }
 
-    /* Footer */
+    /* FOOTER */
+
     footer {
       margin-top: 80px;
       padding-top: 20px;
@@ -429,9 +531,12 @@
       color: #849099;
     }
 
-    /* Mobile */
+    /* MOBILE */
+
     @media (max-width: 720px) {
-      .container { padding: 35px 22px 70px; }
+      .container {
+        padding: 35px 22px 70px;
+      }
 
       .intro {
         grid-template-columns: 1fr;
@@ -444,11 +549,25 @@
         height: 145px;
       }
 
-      h1 { font-size: 43px; }
-      .nav { gap: 18px; }
-      section { margin-top: 55px; }
-      .section-heading { gap: 12px; }
-      h2 { font-size: 25px; }
+      h1 {
+        font-size: 43px;
+      }
+
+      .nav {
+        gap: 18px;
+      }
+
+      section {
+        margin-top: 55px;
+      }
+
+      .section-heading {
+        gap: 12px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
 
       #experience .entry {
         grid-template-columns: 64px minmax(0, 1fr);
@@ -461,14 +580,40 @@
         min-width: 64px;
       }
 
+      /* Mobile project cards */
       #projects .entry {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
         padding: 20px;
+        align-items: start;
       }
 
+      #projects .entry > div:last-child {
+        min-width: 0;
+      }
+
+      #projects .visual {
+        width: 100%;
+        height: 160px;
+        max-width: 100%;
+      }
+
+      #projects .visual img {
+        object-fit: contain;
+        object-position: center;
+        background: #fff;
+      }
+
+      /* Mobile leadership entries */
       #leadership .entry {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 12px;
+      }
+
+      #leadership .visual {
+        width: 175px;
+        height: 120px;
+        max-width: 100%;
       }
 
       .skill-row {
@@ -476,16 +621,24 @@
         gap: 4px;
       }
 
-      .links span { margin: 0 8px; }
+      .links span {
+        margin: 0 8px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
+      html {
+        scroll-behavior: auto;
+      }
 
       #projects .entry,
-      .nav a { transition: none; }
+      .nav a {
+        transition: none;
+      }
 
-      #projects .entry:hover { transform: none; }
+      #projects .entry:hover {
+        transform: none;
+      }
     }
   </style>
 </head>
@@ -493,7 +646,8 @@
 <body>
 <main class="container">
 
-  <!-- Introduction -->
+  <!-- INTRODUCTION -->
+
   <header class="intro">
     <div>
       <div class="eyebrow">
@@ -526,7 +680,9 @@
         <span>/</span>
         <a href="https://www.linkedin.com/in/ocean-kafle/">LinkedIn</a>
         <span>/</span>
-        <a href="Ocean_Kafle_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="Ocean_Kafle_Resume.pdf"
+           target="_blank"
+           rel="noopener noreferrer">Resume</a>
       </div>
     </div>
 
@@ -537,7 +693,8 @@
     >
   </header>
 
-  <!-- Navigation -->
+  <!-- NAVIGATION -->
+
   <nav class="nav" aria-label="Page sections">
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
@@ -545,7 +702,8 @@
     <a href="#skills">Skills</a>
   </nav>
 
-  <!-- Experience -->
+  <!-- EXPERIENCE -->
+
   <section id="experience">
     <div class="section-heading">
       <h2>Experience</h2>
@@ -553,27 +711,42 @@
 
     <article class="entry">
       <div class="company-logo goldman">
-        <img src="goldman_logo.png" alt="Goldman Sachs logo" loading="lazy">
+        <img
+          src="goldman_logo.png"
+          alt="Goldman Sachs logo"
+          loading="lazy"
+        >
       </div>
+
       <div>
         <h3>Engineering Summer Analyst · Goldman Sachs</h3>
         <div class="meta">Dallas, TX · Summer 2026</div>
+
         <p>
-          At Goldman Sachs, I worked on Marquee Atlas, a platform for market risk analysis and hedging.
-          I focused on making complex workflows more intuitive and helped introduce AI-powered scenario
-          generation through natural language. I especially enjoyed seeing how thoughtful design improvements
-          could make a huge difference in how clients explored and understood market risk.
+          At Goldman Sachs, I worked on Marquee Atlas, a platform for
+          market risk analysis and hedging. I focused on making complex
+          workflows more intuitive and helped introduce AI-powered
+          scenario generation through natural language. I especially
+          enjoyed seeing how thoughtful design improvements could make
+          a huge difference in how clients explored and understood
+          market risk.
         </p>
       </div>
     </article>
 
     <article class="entry">
       <div class="company-logo lockheed">
-        <img src="lockheed_logo.png" alt="Lockheed Martin logo" loading="lazy">
+        <img
+          src="lockheed_logo.png"
+          alt="Lockheed Martin logo"
+          loading="lazy"
+        >
       </div>
+
       <div>
         <h3>Software Engineering Intern · Lockheed Martin</h3>
         <div class="meta">Grand Prairie, TX · Summer 2025</div>
+
         <p>
           I worked on making life easier for engineers building embedded
           FPGA software. I automated development workflows with GitLab
@@ -587,11 +760,17 @@
 
     <article class="entry">
       <div class="company-logo lockheed">
-        <img src="lockheed_logo.png" alt="Lockheed Martin logo" loading="lazy">
+        <img
+          src="lockheed_logo.png"
+          alt="Lockheed Martin logo"
+          loading="lazy"
+        >
       </div>
+
       <div>
         <h3>Test Engineering Intern · Lockheed Martin</h3>
         <div class="meta">Grand Prairie, TX · 2024</div>
+
         <p>
           I built internal tools to help engineers spend less time
           managing equipment and analyzing testing data. I took a
@@ -606,7 +785,8 @@
     </article>
   </section>
 
-  <!-- Selected Projects -->
+  <!-- SELECTED PROJECTS -->
+
   <section id="projects">
     <div class="section-heading">
       <h2>Selected Projects</h2>
@@ -617,13 +797,20 @@
     </p>
 
     <!-- ARGUS -->
+
     <article class="entry">
       <div class="visual project">
-        <img src="Sensor.png" alt="ARGUS sensor deployment visualization" loading="lazy">
+        <img
+          src="Sensor.png"
+          alt="ARGUS sensor deployment visualization"
+          loading="lazy"
+        >
       </div>
+
       <div>
         <h3>ARGUS Sensor: Agentic AI for Spatial Planning</h3>
         <div class="meta">2026 · LLMs, VLMs, Azure OpenAI</div>
+
         <p>
           Developed a system that uses language and vision models to
           turn user goals and floor plans into sensor placement plans,
@@ -633,85 +820,118 @@
         <div class="project-links">
           <a
             href="https://docs.google.com/presentation/d/16gAq_xnjpfZXDR4x5quHahSyzuQ4vwMEO8xNT1rJdqI/edit?usp=sharing"
-            target="_blank" rel="noopener noreferrer">Presentation</a>
+            target="_blank"
+            rel="noopener noreferrer">Presentation</a>
+
           <a
             href="ARGUS_Final_Report.pdf"
-            target="_blank" rel="noopener noreferrer">Final Report</a>
+            target="_blank"
+            rel="noopener noreferrer">Final Report</a>
+
           <a
             href="https://drive.google.com/file/d/13kWabCBlI38_WLpfezkvPCJPEYHWhKXZ/view?usp=sharing"
-            target="_blank" rel="noopener noreferrer">Demo</a>
-          
+            target="_blank"
+            rel="noopener noreferrer">Demo</a>
+
           <a href="ARGUS.zip" download>Source Code</a>
         </div>
       </div>
     </article>
 
     <!-- ARC-AGI -->
+
     <article class="entry">
-        <div class="visual project">
-          <img src="ARC.png" alt="ARC-AGI visual reasoning puzzle" loading="lazy">
-        </div>
+      <div class="visual project">
+        <img
+          src="ARC.png"
+          alt="ARC-AGI visual reasoning puzzle"
+          loading="lazy"
+        >
+      </div>
+
       <div>
         <h3>ARC-AGI Solver</h3>
         <div class="meta">2025 · Python, reasoning algorithms</div>
+
         <p>
           Built a solver for visual reasoning tasks and experimented
           with approaches to pattern recognition and grid transformations,
-          achieving roughly 3× better partial correctness than heuristic
-          baselines.
+          achieving roughly 3× better partial correctness than
+          heuristic baselines.
         </p>
 
         <div class="project-links">
           <a
             href="Milestone_4_KBAI.pdf"
-            target="_blank" rel="noopener noreferrer">Final Report</a>
+            target="_blank"
+            rel="noopener noreferrer">Final Report</a>
+
           <a
             href="Knowledge_Based_AI_Poster.png"
-            target="_blank" rel="noopener noreferrer">Project Poster</a>
+            target="_blank"
+            rel="noopener noreferrer">Project Poster</a>
         </div>
       </div>
     </article>
 
-    <!-- Atlanta Food Finder -->
+    <!-- ATLANTA FOOD FINDER -->
+
     <article class="entry">
-        <div class="visual project">
-          <img src="Atlanta_Food_Finder.png" alt="Atlanta Food Finder website homepage" loading="lazy">
-        </div>
+      <div class="visual project">
+        <img
+          src="Atlanta_Food_Finder.png"
+          alt="Atlanta Food Finder website homepage"
+          loading="lazy"
+        >
+      </div>
+
       <div>
         <h3>Atlanta Food Finder</h3>
         <div class="meta">2024 · Django, PostgreSQL, Google Maps API</div>
+
         <p>
           Built a web application for discovering food spots around
           Atlanta, combining a Django backend with relational data
           and maps integration.
         </p>
 
-        <!-- Replace placeholder URLs once available -->
         <div class="project-links">
           <a
             href="https://github.com/oceankafle/FoodFinder"
-            target="_blank" rel="noopener noreferrer">GitHub</a>
+            target="_blank"
+            rel="noopener noreferrer">GitHub</a>
+
           <a
             href="https://www.loom.com/share/4bd6a5af7dde42a48cb63fa138a47b23"
-            target="_blank" rel="noopener noreferrer">Live Demo</a>
+            target="_blank"
+            rel="noopener noreferrer">Live Demo</a>
         </div>
       </div>
     </article>
   </section>
 
-  <!-- Leadership -->
+  <!-- LEADERSHIP & INVOLVEMENT -->
+
   <section id="leadership">
     <div class="section-heading">
       <h2>Leadership &amp; Involvement</h2>
     </div>
 
+    <!-- STARTUP EXCHANGE -->
+
     <article class="entry">
-        <div class="visual">
-          <img src="SX_logo.png" alt="Georgia Tech Startup Exchange" loading="lazy">
-        </div>
+      <div class="visual">
+        <img
+          src="SX_logo.png"
+          alt="Georgia Tech Startup Exchange"
+          loading="lazy"
+        >
+      </div>
+
       <div>
         <h3>Director of Community Growth · GT Startup Exchange</h3>
         <div class="meta">Georgia Tech · 2024–present</div>
+
         <p>
           Help lead community-building efforts for Georgia Tech's
           entrepreneurship ecosystem, including mentoring more than
@@ -721,32 +941,44 @@
       </div>
     </article>
 
+    <!-- EQUITY RESEARCH -->
+
     <article class="entry">
-        <div class="visual">
-          <img src="Equity_Research_Team.png" alt="Georgia Tech Equity Research" loading="lazy">
-        </div>
+      <div class="visual">
+        <img
+          src="Equity_Research_Team.png"
+          alt="Georgia Tech Equity Research"
+          loading="lazy"
+        >
+      </div>
+
       <div>
         <h3>Equity Research Team</h3>
         <div class="meta">Georgia Tech · 2025</div>
+
         <p>
           Led student equity research work involving company analysis
           and financial models, bringing together my interests in
           software, business, and financial markets.
         </p>
 
-        <!-- Replace placeholder URLs once available -->
         <div class="project-links">
-          <a href="https://youtu.be/M6baviu4TD4"
-             target="_blank" rel="noopener noreferrer">GOOGL Stock Pitch</a>
-        
-          <a href="https://youtu.be/5nfs5ghSHuA"
-             target="_blank" rel="noopener noreferrer">CCL Stock Pitch</a>
-        </div>      
+          <a
+            href="https://youtu.be/M6baviu4TD4"
+            target="_blank"
+            rel="noopener noreferrer">GOOGL Stock Pitch</a>
+
+          <a
+            href="https://youtu.be/5nfs5ghSHuA"
+            target="_blank"
+            rel="noopener noreferrer">CCL Stock Pitch</a>
+        </div>
       </div>
     </article>
   </section>
 
-  <!-- Skills -->
+  <!-- TECHNICAL SKILLS -->
+
   <section id="skills">
     <div class="section-heading">
       <h2>Technical Skills</h2>
@@ -773,6 +1005,8 @@
       </div>
     </div>
   </section>
+
+  <!-- FOOTER -->
 
   <footer>
     Last updated October 2026 · Built with HTML and CSS · Hosted on GitHub Pages
