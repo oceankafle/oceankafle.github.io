@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -65,8 +64,6 @@
       padding: 72px 42px 100px;
     }
 
-    /* Typography */
-
     h1, h2, h3, p {
       margin-top: 0;
     }
@@ -116,8 +113,6 @@
       margin-bottom: 15px;
     }
 
-    /* Introduction */
-
     .intro {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 215px;
@@ -144,14 +139,13 @@
       width: 215px;
       height: 215px;
       object-fit: cover;
+      object-position: center 18%;
       border-radius: 50%;
       border: 6px solid #fff;
       box-shadow:
         0 0 0 2px var(--pink-line),
         12px 13px 0 -4px #f3e4ea;
     }
-
-    /* Personal links */
 
     .links {
       display: flex;
@@ -178,8 +172,6 @@
       margin: 0 12px;
     }
 
-    /* Navigation */
-
     .nav {
       display: flex;
       flex-wrap: wrap;
@@ -201,8 +193,6 @@
       color: var(--pink);
       text-decoration: none;
     }
-
-    /* Sections */
 
     section {
       scroll-margin-top: 28px;
@@ -253,8 +243,6 @@
       );
     }
 
-    /* General entries */
-
     .entry {
       display: grid;
       grid-template-columns: 155px minmax(0, 1fr);
@@ -273,8 +261,6 @@
       font-size: 15px;
       line-height: 1.75;
     }
-
-    /* Company logos */
 
     .company-logo {
       width: 76px;
@@ -315,8 +301,6 @@
       transform: none;
     }
 
-    /* Experience */
-
     #experience .entry {
       grid-template-columns: 76px minmax(0, 1fr);
       gap: 24px;
@@ -344,8 +328,6 @@
       line-height: 1.85;
       max-width: 760px;
     }
-
-    /* Project visuals */
 
     .visual {
       width: 155px;
@@ -393,8 +375,6 @@
       margin-bottom: 24px;
     }
 
-    /* Projects */
-
     #projects .entry {
       background: #fff;
       border: 1px solid #ece5e7;
@@ -431,7 +411,34 @@
       margin-bottom: 7px;
     }
 
-    /* Leadership */
+    /* project / artifact links */
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 18px;
+      margin-top: 13px;
+    }
+
+    .project-links a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .project-links a::after {
+      content: " ↗";
+      font-size: 12px;
+      color: var(--pink);
+    }
+
+    .project-links a:hover {
+      color: var(--pink);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
 
     #leadership .entry {
       padding: 22px 0 29px;
@@ -451,8 +458,6 @@
       background: var(--pink);
     }
 
-    /* Skills */
-
     .skill-row {
       display: grid;
       grid-template-columns: 150px 1fr;
@@ -471,8 +476,6 @@
       border-bottom: none;
     }
 
-    /* Footer */
-
     footer {
       margin-top: 80px;
       padding-top: 20px;
@@ -480,8 +483,6 @@
       font-size: 12px;
       color: #849099;
     }
-
-    /* Mobile */
 
     @media (max-width: 720px) {
       .container {
@@ -570,8 +571,6 @@
 <body>
 <main class="container">
 
-  <!-- INTRODUCTION -->
-
   <header class="intro">
     <div>
       <div class="eyebrow">
@@ -604,9 +603,7 @@
         <span>/</span>
         <a href="https://www.linkedin.com/in/ocean-kafle/">LinkedIn</a>
         <span>/</span>
-        <a href="Ocean_Kafle_Resume_2026.pdf"
-           target="_blank"
-           rel="noopener noreferrer">Resume</a>
+        <a href="Ocean_Kafle_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </div>
     </div>
 
@@ -617,16 +614,12 @@
     >
   </header>
 
-  <!-- NAVIGATION -->
-
   <nav class="nav" aria-label="Page sections">
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#leadership">Leadership</a>
     <a href="#skills">Skills</a>
   </nav>
-
-  <!-- EXPERIENCE -->
 
   <section id="experience">
     <div class="section-heading">
@@ -647,10 +640,10 @@
         <div class="meta">Dallas, TX · Summer 2026</div>
 
         <p>
-        At Goldman Sachs, I worked on Marquee Atlas, a platform that helps clients analyze market risk and hedging strategies. 
-        I spent much of my summer finding ways to make complex workflows easier to use and helped bring AI into the platform 
-        so clients could create risk scenarios using plain English. What I enjoyed most was seeing how even small design changes
-        could make a big difference in the user experience.
+        At Goldman Sachs, I worked on Marquee Atlas, a platform for market risk analysis and hedging.
+        I focused on making complex workflows more intuitive and helped introduce AI-powered scenario
+        generation through natural language. I especially enjoyed seeing how thoughtful design improvements
+        could make a huge difference in how clients explored and understood market risk.
         </p>
       </div>
     </article>
@@ -706,8 +699,6 @@
     </article>
   </section>
 
-  <!-- PROJECTS -->
-
   <section id="projects">
     <div class="section-heading">
       <h2>Selected Projects</h2>
@@ -730,6 +721,12 @@
           turn user goals and floor plans into sensor placement plans,
           with a multi-stage reasoning pipeline and visualized outputs.
         </p>
+
+        <div class="project-links">
+          <a href=https://docs.google.com/presentation/d/16gAq_xnjpfZXDR4x5quHahSyzuQ4vwMEO8xNT1rJdqI/edit?usp=sharing target="_blank" rel="noopener noreferrer">Presentation</a>
+          <a href="YOUR_ARGUS_PAPER_LINK_HERE" target="_blank" rel="noopener noreferrer">Paper</a>
+          <a href=https://drive.google.com/file/d/13kWabCBlI38_WLpfezkvPCJPEYHWhKXZ/view?usp=sharing target="_blank" rel="noopener noreferrer">Demo</a>
+        </div>
       </div>
     </article>
 
@@ -747,6 +744,11 @@
           achieving roughly 3× better partial correctness than heuristic
           baselines.
         </p>
+
+        <div class="project-links">
+          <a href="YOUR_ARC_AGI_PAPER_LINK_HERE" target="_blank" rel="noopener noreferrer">Paper</a>
+          <a href="YOUR_ARC_AGI_CODE_LINK_HERE" target="_blank" rel="noopener noreferrer">Code</a>
+        </div>
       </div>
     </article>
 
@@ -763,11 +765,14 @@
           Atlanta, combining a Django backend with relational data
           and maps integration.
         </p>
+
+        <div class="project-links">
+          <a href="YOUR_ATLANTA_FOOD_FINDER_GITHUB_LINK_HERE" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="YOUR_ATLANTA_FOOD_FINDER_LIVE_SITE_LINK_HERE" target="_blank" rel="noopener noreferrer">Live Website</a>
+        </div>
       </div>
     </article>
   </section>
-
-  <!-- LEADERSHIP -->
 
   <section id="leadership">
     <div class="section-heading">
@@ -804,11 +809,14 @@
           and financial models, bringing together my interests in
           software, business, and financial markets.
         </p>
+
+        <div class="project-links">
+          <a href="YOUR_GOOGL_STOCK_PITCH_VIDEO_LINK_HERE" target="_blank" rel="noopener noreferrer">GOOGL Stock Pitch</a>
+          <a href="YOUR_CCL_STOCK_PITCH_VIDEO_LINK_HERE" target="_blank" rel="noopener noreferrer">CCL Stock Pitch</a>
+        </div>
       </div>
     </article>
   </section>
-
-  <!-- SKILLS -->
 
   <section id="skills">
     <div class="section-heading">
@@ -836,8 +844,6 @@
       </div>
     </div>
   </section>
-
-  <!-- FOOTER -->
 
   <footer>
     Last updated October 2026 · Built with HTML and CSS · Hosted on GitHub Pages
