@@ -5,36 +5,54 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Ocean Kafle — Computer Science at Georgia Tech. Software engineering, AI, and financial technology.">
-  <meta name="theme-color" content="#fdfdfb">
+  <meta name="theme-color" content="#fcfaf8">
   <title>Ocean Kafle</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --ink: #1d2933;
-      --muted: #62717c;
-      --accent: #226b89;
-      --accent-dark: #14516e;
-      --light: #eaf4f6;
-      --pink: #b85b82;
-      --pink-soft: #faedf2;
-      --pink-line: #edcdda;
-      --rule: #e6ebec;
-      --bg: #fdfdfb;
+      --ink: #26313b;
+      --muted: #667480;
+      --accent: #2a7189;
+      --accent-dark: #17566d;
+      --pink: #bd6b90;
+      --pink-soft: #f9edf2;
+      --pink-line: #efd9e2;
+      --rule: #ebe7e6;
+      --bg: #fcfaf8;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       background: var(--bg);
       color: var(--ink);
-      font: 16px/1.68 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-family: "DM Sans", sans-serif;
+      font-size: 15.5px;
+      line-height: 1.75;
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; color: var(--accent-dark); }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
+
     a:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 4px;
@@ -42,141 +60,299 @@
     }
 
     .container {
-      max-width: 950px;
+      max-width: 1010px;
       margin: 0 auto;
-      padding: 76px 36px 90px;
+      padding: 72px 42px 100px;
     }
 
-    .intro {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 205px;
-      align-items: center;
-      gap: 68px;
-    }
+    /* Typography */
 
-    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
 
     h1 {
-      font-weight: 650;
-      letter-spacing: -1.1px;
-      font-size: 37px;
-      line-height: 1.2;
-      margin-bottom: 16px;
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(43px, 5.5vw, 63px);
+      font-weight: 500;
+      letter-spacing: -2px;
+      line-height: 1.12;
+      margin-bottom: 24px;
+    }
+
+    h1 em {
+      color: var(--pink);
+      font-weight: 500;
     }
 
     h1::after {
       content: "";
       display: block;
-      width: 43px;
+      width: 48px;
       height: 3px;
       background: var(--pink);
       border-radius: 3px;
-      margin-top: 12px;
+      margin-top: 19px;
     }
 
     h2 {
-      font-size: 23px;
-      letter-spacing: -.55px;
-      font-weight: 650;
-      margin: 0 0 23px;
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 28px;
+      font-weight: 500;
+      letter-spacing: -0.8px;
+      margin: 0;
     }
 
     h3 {
-      font-size: 17px;
-      line-height: 1.35;
-      font-weight: 650;
-      margin: 0 0 3px;
+      font-family: "DM Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.35px;
+      line-height: 1.4;
+      margin: 0 0 4px;
     }
 
-    p { margin-bottom: 15px; }
-    .intro p { line-height: 1.65; }
+    p {
+      margin-bottom: 15px;
+    }
+
+    /* Introduction */
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 215px;
+      gap: 65px;
+      align-items: center;
+      padding: 22px 0 40px;
+    }
 
     .eyebrow {
-      font-weight: 700;
       color: var(--pink);
       font-size: 11px;
-      letter-spacing: 1.9px;
+      font-weight: 700;
+      letter-spacing: 2.2px;
       text-transform: uppercase;
-      margin: 0 0 13px;
+      margin-bottom: 22px;
+    }
+
+    .intro p {
+      max-width: 650px;
+      line-height: 1.8;
     }
 
     .avatar {
-      width: 205px;
-      height: 205px;
-      border-radius: 50%;
+      width: 215px;
+      height: 215px;
       object-fit: cover;
-      background: #eaf2f2;
-      border: 5px solid white;
-      box-shadow: 0 0 0 1px var(--pink-line), 0 7px 28px rgba(23,59,67,.07);
+      border-radius: 50%;
+      border: 6px solid #fff;
+      box-shadow:
+        0 0 0 2px var(--pink-line),
+        12px 13px 0 -4px #f3e4ea;
     }
+
+    /* Personal links */
 
     .links {
       display: flex;
       flex-wrap: wrap;
       gap: 8px 0;
       align-items: center;
-      margin-top: 21px;
+      margin-top: 26px;
       font-size: 15px;
     }
 
-    .links span { color: var(--pink); margin: 0 12px; }
-    .links a { font-weight: 550; }
+    .links a {
+      font-weight: 600;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .links a:hover {
+      color: var(--pink);
+      text-decoration: underline;
+    }
+
+    .links span {
+      color: var(--pink);
+      margin: 0 12px;
+    }
+
+    /* Navigation */
 
     .nav {
       display: flex;
-      gap: 24px;
       flex-wrap: wrap;
+      gap: 30px;
       border-top: 1px solid var(--rule);
       border-bottom: 1px solid var(--rule);
-      padding: 13px 0;
-      margin: 45px 0 0;
+      margin-top: 10px;
+      padding: 17px 0;
       font-size: 13px;
-      font-weight: 650;
-      letter-spacing: .15px;
+      font-weight: 600;
     }
 
-    .nav a { color: var(--muted); }
-    .nav a:hover { color: var(--accent); }
+    .nav a {
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+
+    .nav a:hover {
+      color: var(--pink);
+      text-decoration: none;
+    }
+
+    /* Sections */
 
     section {
       scroll-margin-top: 28px;
-      margin-top: 66px;
+      margin-top: 76px;
     }
 
     .section-heading {
       display: flex;
-      align-items: center;
-      gap: 17px;
-      margin-bottom: 23px;
+      align-items: baseline;
+      gap: 19px;
+      margin-bottom: 25px;
     }
 
-    .section-heading h2 {
-      margin: 0;
-      white-space: nowrap;
+    .section-heading::before {
+      font-family: "DM Sans", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--pink);
+      flex-shrink: 0;
+    }
+
+    #experience .section-heading::before {
+      content: "01";
+    }
+
+    #projects .section-heading::before {
+      content: "02";
+    }
+
+    #leadership .section-heading::before {
+      content: "03";
+    }
+
+    #skills .section-heading::before {
+      content: "04";
     }
 
     .section-heading::after {
       content: "";
       height: 1px;
-      width: 100%;
-      background: linear-gradient(90deg, var(--pink-line), var(--rule) 65%);
+      flex: 1;
+      align-self: center;
+      background: linear-gradient(
+        90deg,
+        var(--pink-line),
+        var(--rule) 80%
+      );
     }
 
-    /* General project and leadership entries */
+    /* General entries */
+
     .entry {
       display: grid;
       grid-template-columns: 155px minmax(0, 1fr);
-      gap: 29px;
-      padding: 18px 0 30px;
-      margin-bottom: 8px;
+      gap: 25px;
+      padding: 22px 0 29px;
     }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 4px 0 12px;
+    }
+
+    .entry p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* Company logos */
+
+    .company-logo {
+      width: 76px;
+      height: 76px;
+      min-width: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .company-logo img {
+      display: block;
+      position: static;
+    }
+
+    .company-logo.goldman {
+      background: #719bc6;
+    }
+
+    .company-logo.goldman img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: none;
+    }
+
+    .company-logo.lockheed {
+      background: white;
+      border: 1px solid #e5eaf0;
+    }
+
+    .company-logo.lockheed img {
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
+      transform: none;
+    }
+
+    /* Experience */
+
+    #experience .entry {
+      grid-template-columns: 76px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+      padding: 28px 0 35px;
+      margin: 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    #experience .entry:last-child {
+      border-bottom: none;
+    }
+
+    #experience h3 {
+      font-size: 18px;
+      margin-bottom: 3px;
+    }
+
+    #experience .meta {
+      margin-bottom: 14px;
+    }
+
+    #experience .entry p {
+      font-size: 15px;
+      line-height: 1.85;
+      max-width: 760px;
+    }
+
+    /* Project visuals */
 
     .visual {
       width: 155px;
       height: 108px;
-      border: 1px solid #e2e9e9;
-      border-radius: 7px;
       background: #f1f6f6;
+      border: 1px solid #e2e9e9;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -192,548 +368,234 @@
       left: 0;
       top: 0;
       bottom: 0;
-      width: 3px;
+      width: 4px;
       background: #85b1c2;
     }
 
     .visual span {
       font-size: 13px;
-      letter-spacing: .1px;
       font-weight: 650;
       color: #47687a;
     }
 
-    .visual.project {
-      background: linear-gradient(145deg, #faedf2, #edf3f7);
-    }
-
-    .visual.project::before { background: var(--pink); }
-
     .visual img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      position: absolute;
-      inset: 0;
-    }
-
-    .meta {
-      color: var(--muted);
-      font-size: 13px;
-      margin: 4px 0 11px;
-    }
-
-    .entry p {
-      margin: 0;
-      font-size: 15px;
-      line-height: 1.7;
     }
 
     .intro-note {
       color: var(--muted);
-      margin-top: -7px;
-      margin-bottom: 18px;
       font-size: 15px;
+      margin-top: -7px;
+      margin-bottom: 24px;
     }
 
-    /* LinkedIn-inspired experience section */
-    #experience .entry {
-      display: grid;
-      grid-template-columns: 78px minmax(0, 1fr);
-      gap: 20px;
-      align-items: start;
-      padding: 22px 0 26px;
-      margin: 0;
+    /* Projects */
+
+    #projects .entry {
+      background: #fff;
+      border: 1px solid #ece5e7;
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 18px;
+      gap: 25px;
+      box-shadow: 0 4px 20px rgba(38,49,59,.025);
+      transition:
+        transform .2s ease,
+        border-color .2s ease;
+    }
+
+    #projects .entry:hover {
+      transform: translateY(-3px);
+      border-color: var(--pink-line);
+    }
+
+    #projects .visual.project {
+      background: linear-gradient(
+        135deg,
+        #f9edf2,
+        #e6f0f2
+      );
+      border: none;
+      border-radius: 10px;
+    }
+
+    #projects .visual.project::before {
+      background: var(--pink);
+    }
+
+    #projects h3 {
+      margin-bottom: 7px;
+    }
+
+    /* Leadership */
+
+    #leadership .entry {
+      padding: 22px 0 29px;
       border-bottom: 1px solid var(--rule);
     }
 
-    #experience .entry:last-child { border-bottom: 0; }
-
-    #experience .company-logo {
-      width: 78px;
-      height: 78px;
-      min-width: 78px;
-      overflow: hidden;
-      border: 0;
-      border-radius: 9px;
-      box-shadow: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    #leadership .entry:last-child {
+      border-bottom: none;
     }
 
-    /* Goldman Sachs — unchanged */
-    #experience .company-logo.goldman {
-      background: #719bc6;
+    #leadership .visual {
+      background: #f8eff3;
+      border: 1px solid #efdee5;
     }
 
-    #experience .company-logo.goldman img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: static;
-      transform: none;
-    }
-
-    /* Lockheed Martin — fixed to show the FULL logo */
-    #experience .company-logo.lockheed {
-      background: #ffffff;
-      border: 1px solid #e5eaf0;
-    }
-
-    #experience .company-logo.lockheed img {
-      display: block;
-      width: 90%;
-      height: 90%;
-      object-fit: contain;
-      position: static;
-      transform: none;
-    }
-
-    #experience h3 {
-      font-size: 17px;
-      line-height: 1.4;
-      margin-bottom: 2px;
-    }
-
-    #experience .meta {
-      font-size: 13px;
-      margin: 0 0 10px;
-      color: var(--muted);
-    }
-
-    #experience .entry p {
-      font-size: 15px;
-      line-height: 1.65;
+    #leadership .visual::before {
+      background: var(--pink);
     }
 
     /* Skills */
+
     .skill-row {
       display: grid;
       grid-template-columns: 150px 1fr;
       gap: 22px;
-      padding: 10px 0;
+      padding: 15px 0;
       border-bottom: 1px solid var(--rule);
       font-size: 15px;
     }
 
-    .skill-row strong { font-weight: 650; }
-    .skill-row:last-child { border-bottom: 0; }
+    .skill-row strong {
+      color: var(--accent);
+      font-weight: 650;
+    }
+
+    .skill-row:last-child {
+      border-bottom: none;
+    }
+
+    /* Footer */
 
     footer {
-      font-size: 12px;
-      color: #84929a;
+      margin-top: 80px;
+      padding-top: 20px;
       border-top: 1px solid var(--rule);
-      margin-top: 65px;
-      padding-top: 17px;
+      font-size: 12px;
+      color: #849099;
     }
 
     /* Mobile */
-    @media (max-width: 720px) {
-      .container { padding: 43px 22px 65px; }
-      .intro { grid-template-columns: 1fr; gap: 24px; }
-      .avatar { grid-row: 1; width: 137px; height: 137px; }
-      .intro h1 { font-size: 32px; }
-      .nav { gap: 15px; margin-top: 32px; }
-      section { margin-top: 48px; }
 
-      .entry {
-        grid-template-columns: 1fr;
-        gap: 13px;
-        padding-top: 13px;
-        padding-bottom: 22px;
+    @media (max-width: 720px) {
+      .container {
+        padding: 35px 22px 70px;
       }
 
-      .visual { width: 155px; height: 90px; }
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .avatar {
+        grid-row: 1;
+        width: 145px;
+        height: 145px;
+      }
+
+      h1 {
+        font-size: 43px;
+      }
+
+      .nav {
+        gap: 18px;
+      }
+
+      section {
+        margin-top: 55px;
+      }
+
+      .section-heading {
+        gap: 12px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
 
       #experience .entry {
         grid-template-columns: 64px minmax(0, 1fr);
-        gap: 15px;
+        gap: 16px;
       }
 
-      #experience .company-logo {
+      .company-logo {
         width: 64px;
         height: 64px;
         min-width: 64px;
       }
 
-      .skill-row { grid-template-columns: 1fr; gap: 3px; }
-      .links span { margin: 0 8px; }
+      #projects .entry {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+
+      #leadership .entry {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .skill-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .links span {
+        margin: 0 8px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
+      html {
+        scroll-behavior: auto;
+      }
+
+      #projects .entry,
+      .nav a {
+        transition: none;
+      }
+
+      #projects .entry:hover {
+        transform: none;
+      }
     }
-    
-/* =========================================
-   Ocean Kafle — Modern Editorial Refresh
-   Paste at the bottom of your style section
-   ========================================= */
-
-/* Softer, warmer color palette */
-:root {
-  --ink: #25313c;
-  --muted: #687581;
-  --accent: #276f88;
-  --accent-dark: #18546b;
-  --pink: #c76b90;
-  --pink-soft: #f9edf2;
-  --pink-line: #ecd2dc;
-  --rule: #e8e6e5;
-  --bg: #fcfaf8;
-}
-
-/* Overall layout */
-body {
-  background: var(--bg);
-  letter-spacing: -0.12px;
-}
-
-.container {
-  max-width: 1030px;
-  padding: 80px 45px 100px;
-}
-
-/* More editorial typography */
-h1 {
-  font-size: clamp(42px, 5vw, 58px);
-  font-weight: 700;
-  letter-spacing: -2.2px;
-  line-height: 1.08;
-  margin-bottom: 24px;
-}
-
-h1::after {
-  width: 54px;
-  height: 4px;
-  margin-top: 20px;
-  background: var(--pink);
-}
-
-h2 {
-  font-size: 27px;
-  letter-spacing: -0.9px;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 18px;
-  letter-spacing: -0.35px;
-  font-weight: 650;
-}
-
-/* Introduction */
-.intro {
-  gap: 64px;
-  align-items: center;
-  padding: 25px 0 40px;
-}
-
-.eyebrow {
-  color: var(--pink);
-  font-size: 11px;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-}
-
-.intro p {
-  font-size: 16px;
-  line-height: 1.8;
-  max-width: 640px;
-}
-
-/* Profile photo with subtle pink accent */
-.avatar {
-  width: 205px;
-  height: 205px;
-  border: 6px solid #fff;
-  border-radius: 50%;
-  box-shadow:
-    0 0 0 2px var(--pink-line),
-    0 12px 36px rgba(37, 49, 60, 0.08);
-}
-
-/* Personal links */
-.links {
-  margin-top: 28px;
-}
-
-.links a {
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
-.links a:hover {
-  color: var(--pink);
-}
-
-/* Navigation */
-.nav {
-  margin-top: 15px;
-  padding: 17px 0;
-  gap: 32px;
-  font-size: 13px;
-  letter-spacing: 0.3px;
-}
-
-.nav a {
-  position: relative;
-  transition: color 0.2s ease;
-}
-
-.nav a:hover {
-  color: var(--pink);
-  text-decoration: none;
-}
-
-/* Sections */
-section {
-  margin-top: 83px;
-}
-
-.section-heading {
-  margin-bottom: 28px;
-  gap: 24px;
-}
-
-.section-heading::after {
-  background: linear-gradient(
-    90deg,
-    var(--pink) 0%,
-    var(--pink-line) 25%,
-    var(--rule) 100%
-  );
-}
-
-/* Experience: keep the clean LinkedIn layout */
-#experience .entry {
-  grid-template-columns: 76px minmax(0, 1fr);
-  gap: 25px;
-  padding: 30px 0 36px;
-  border-bottom: 1px solid var(--rule);
-  transition: transform 0.2s ease;
-}
-
-#experience .entry:hover {
-  transform: translateX(4px);
-}
-
-#experience .entry:last-child {
-  border-bottom: none;
-}
-
-#experience .company-logo {
-  width: 76px;
-  height: 76px;
-  min-width: 76px;
-  border-radius: 10px;
-}
-
-/* Preserve existing logo sizing */
-#experience .company-logo.goldman img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: none;
-}
-
-#experience .company-logo.lockheed {
-  background: #fff;
-  border: 1px solid #e5eaf0;
-}
-
-#experience .company-logo.lockheed img {
-  width: 90%;
-  height: 90%;
-  object-fit: contain;
-  transform: none;
-}
-
-#experience h3 {
-  font-size: 19px;
-  margin-bottom: 5px;
-}
-
-#experience .meta {
-  font-size: 13px;
-  color: var(--muted);
-  margin-bottom: 15px;
-}
-
-#experience .entry p {
-  font-size: 15px;
-  line-height: 1.85;
-  max-width: 760px;
-}
-
-/* Projects: subtle cards with personality */
-#projects .entry {
-  background: #fff;
-  border: 1px solid #eeeaeb;
-  border-radius: 14px;
-  padding: 25px;
-  margin-bottom: 18px;
-  gap: 25px;
-  box-shadow: 0 3px 15px rgba(37, 49, 60, 0.025);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
-}
-
-#projects .entry:hover {
-  transform: translateY(-3px);
-  border-color: var(--pink-line);
-  box-shadow: 0 10px 28px rgba(37, 49, 60, 0.055);
-}
-
-#projects .visual.project {
-  border: 0;
-  border-radius: 9px;
-  background: linear-gradient(
-    135deg,
-    #f8e5ed 0%,
-    #e5eff3 100%
-  );
-}
-
-#projects .visual.project::before {
-  width: 4px;
-  background: var(--pink);
-}
-
-#projects h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-/* Leadership: light, understated entries */
-#leadership .entry {
-  padding: 22px 0 30px;
-  border-bottom: 1px solid var(--rule);
-  gap: 25px;
-}
-
-#leadership .entry:last-child {
-  border-bottom: none;
-}
-
-#leadership .visual {
-  background: #f3edef;
-  border: 1px solid #efdee5;
-  border-radius: 10px;
-}
-
-#leadership .visual::before {
-  background: var(--pink);
-}
-
-/* Skills */
-.skill-row {
-  padding: 16px 0;
-  border-bottom: 1px solid var(--rule);
-}
-
-.skill-row strong {
-  color: var(--accent);
-  font-weight: 650;
-}
-
-/* Footer */
-footer {
-  margin-top: 85px;
-  padding-top: 24px;
-  font-size: 12px;
-  letter-spacing: 0.2px;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 720px) {
-  .container {
-    padding: 35px 23px 70px;
-  }
-
-  .intro {
-    grid-template-columns: 1fr;
-    gap: 26px;
-    padding-top: 10px;
-  }
-
-  h1 {
-    font-size: 42px;
-  }
-
-  .avatar {
-    width: 145px;
-    height: 145px;
-    grid-row: 1;
-  }
-
-  .nav {
-    gap: 18px;
-    margin-top: 10px;
-  }
-
-  section {
-    margin-top: 58px;
-  }
-
-  #experience .entry {
-    grid-template-columns: 64px minmax(0, 1fr);
-    gap: 17px;
-  }
-
-  #experience .company-logo {
-    width: 64px;
-    height: 64px;
-    min-width: 64px;
-  }
-
-  #experience h3 {
-    font-size: 17px;
-  }
-
-  #projects .entry {
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
-
-  #leadership .entry {
-    grid-template-columns: 1fr;
-  }
-
-  .skill-row {
-    grid-template-columns: 1fr;
-    gap: 5px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #experience .entry,
-  #projects .entry {
-    transition: none;
-  }
-
-  #experience .entry:hover,
-  #projects .entry:hover {
-    transform: none;
-  }
-}
   </style>
 </head>
 
 <body>
 <main class="container">
 
+  <!-- INTRODUCTION -->
+
   <header class="intro">
     <div>
-      <div class="eyebrow">Software Engineering · AI · Financial Technology</div>
-      <h1>Ocean Kafle</h1>
+      <div class="eyebrow">
+        Software Engineering · AI · Financial Technology
+      </div>
 
-      <p>I'm a Computer Science student at <a href="https://www.gatech.edu/">Georgia Tech</a>, graduating in December 2026 with a focus on artificial intelligence and human-centered computing. I enjoy building software that makes complex problems easier to work with, especially where engineering meets finance, data, and AI.</p>
+      <h1>Ocean <em>Kafle.</em></h1>
 
-      <p>Previously, I was an Engineering Summer Analyst at <strong>Goldman Sachs</strong>, where I worked on the Marquee Atlas risk analysis platform, and a Software Engineering Intern at <strong>Lockheed Martin</strong>, where I worked on developer tooling, testing infrastructure, and data systems.</p>
+      <p>
+        I'm a Computer Science student at
+        <a href="https://www.gatech.edu/">Georgia Tech</a>,
+        graduating in December 2026 with a focus on artificial
+        intelligence and human-centered computing. I enjoy building
+        software that makes complex problems easier to work with,
+        especially where engineering meets finance, data, and AI.
+      </p>
+
+      <p>
+        Previously, I was an Engineering Summer Analyst at
+        <strong>Goldman Sachs</strong>, where I worked on the Marquee
+        Atlas risk analysis platform, and a Software Engineering Intern
+        at <strong>Lockheed Martin</strong>, where I worked on developer
+        tooling, testing infrastructure, and data systems.
+      </p>
 
       <div class="links">
         <a href="mailto:oceankafle@gmail.com">Email</a>
@@ -742,12 +604,20 @@ footer {
         <span>/</span>
         <a href="https://www.linkedin.com/in/ocean-kafle/">LinkedIn</a>
         <span>/</span>
-        <a href="Ocean_Kafle_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="Ocean_Kafle_Resume_2026.pdf"
+           target="_blank"
+           rel="noopener noreferrer">Resume</a>
       </div>
     </div>
 
-    <img class="avatar" src="profile_linkedin.png" alt="Portrait of Ocean Kafle">
+    <img
+      class="avatar"
+      src="profile_linkedin.png"
+      alt="Portrait of Ocean Kafle"
+    >
   </header>
+
+  <!-- NAVIGATION -->
 
   <nav class="nav" aria-label="Page sections">
     <a href="#experience">Experience</a>
@@ -756,99 +626,194 @@ footer {
     <a href="#skills">Skills</a>
   </nav>
 
+  <!-- EXPERIENCE -->
+
   <section id="experience">
-    <div class="section-heading"><h2>Experience</h2></div>
+    <div class="section-heading">
+      <h2>Experience</h2>
+    </div>
 
     <article class="entry">
       <div class="company-logo goldman">
-        <img src="goldman_logo.png" alt="Goldman Sachs logo" loading="lazy">
+        <img
+          src="goldman_logo.png"
+          alt="Goldman Sachs logo"
+          loading="lazy"
+        >
       </div>
+
       <div>
         <h3>Engineering Summer Analyst · Goldman Sachs</h3>
         <div class="meta">Dallas, TX · Summer 2026</div>
-        <p>At Goldman Sachs, I worked on Marquee Atlas, a platform for analyzing market risk and hedging strategies. Much of my summer focused on redesigning workflows to make complex scenario configuration more intuitive, working closely with quantitative strategists to get feedback and iterate. I also helped bring AI into the platform for the first time, building a feature that let users generate risk scenarios in plain English instead of configuring everything manually. My favorite part was seeing how thoughtful design changes made it easier for clients to explore risk scenarios and understand complex market movements.</p>
+
+        <p>
+        At Goldman Sachs, I worked on Marquee Atlas, a platform that helps clients analyze market risk and hedging strategies. 
+        I spent much of my summer finding ways to make complex workflows easier to use and helped bring AI into the platform 
+        so clients could create risk scenarios using plain English. What I enjoyed most was seeing how even small design changes
+        could make a big difference in the user experience.
+        </p>
       </div>
     </article>
 
     <article class="entry">
       <div class="company-logo lockheed">
-        <img src="lockheed_logo.png" alt="Lockheed Martin logo" loading="lazy">
+        <img
+          src="lockheed_logo.png"
+          alt="Lockheed Martin logo"
+          loading="lazy"
+        >
       </div>
+
       <div>
         <h3>Software Engineering Intern · Lockheed Martin</h3>
         <div class="meta">Grand Prairie, TX · Summer 2025</div>
-        <p>I worked on making life easier for engineers building embedded FPGA software. I automated development workflows with GitLab CI/CD and improved testing with GoogleTest, CMake, and static analysis tools. I liked working on the behind-the-scenes infrastructure that helps teams catch bugs earlier and spend less time on repetitive work.</p>
+
+        <p>
+          I worked on making life easier for engineers building embedded
+          FPGA software. I automated development workflows with GitLab
+          CI/CD and improved testing with GoogleTest, CMake, and static
+          analysis tools. I liked working on the behind-the-scenes
+          infrastructure that helps teams catch bugs earlier and spend
+          less time on repetitive work.
+        </p>
       </div>
     </article>
 
     <article class="entry">
       <div class="company-logo lockheed">
-        <img src="lockheed_logo.png" alt="Lockheed Martin logo" loading="lazy">
+        <img
+          src="lockheed_logo.png"
+          alt="Lockheed Martin logo"
+          loading="lazy"
+        >
       </div>
+
       <div>
         <h3>Test Engineering Intern · Lockheed Martin</h3>
         <div class="meta">Grand Prairie, TX · 2024</div>
-        <p>I built internal tools to help engineers spend less time managing equipment and analyzing testing data. I took a C#/.NET asset-tracking app from idea to implementation, worked on PostgreSQL migrations, and used Python and SQL to turn over 1 million data points into visualizations and insights, improving analytics efficiency by 20%. This was where I discovered how much I enjoy owning projects end-to-end and seeing their impact firsthand.</p>
+
+        <p>
+          I built internal tools to help engineers spend less time
+          managing equipment and analyzing testing data. I took a
+          C#/.NET asset-tracking app from idea to implementation,
+          worked on PostgreSQL migrations, and used Python and SQL to
+          turn over 1 million data points into visualizations and
+          insights, improving analytics efficiency by 20%. This was
+          where I discovered how much I enjoy owning projects end-to-end
+          and seeing their impact firsthand.
+        </p>
       </div>
     </article>
   </section>
 
+  <!-- PROJECTS -->
+
   <section id="projects">
-    <div class="section-heading"><h2>Selected Projects</h2></div>
-    <p class="intro-note">A few things I've worked on outside of internships.</p>
+    <div class="section-heading">
+      <h2>Selected Projects</h2>
+    </div>
+
+    <p class="intro-note">
+      A few things I've worked on outside of internships.
+    </p>
 
     <article class="entry">
-      <div class="visual project"><span>AI + Vision</span></div>
+      <div class="visual project">
+        <span>AI + Vision</span>
+      </div>
+
       <div>
         <h3>ARGUS Sensor: Agentic AI for Spatial Planning</h3>
         <div class="meta">2026 · LLMs, VLMs, Azure OpenAI</div>
-        <p>Developed a system that uses language and vision models to turn user goals and floor plans into sensor placement plans, with a multi-stage reasoning pipeline and visualized outputs.</p>
+        <p>
+          Developed a system that uses language and vision models to
+          turn user goals and floor plans into sensor placement plans,
+          with a multi-stage reasoning pipeline and visualized outputs.
+        </p>
       </div>
     </article>
 
     <article class="entry">
-      <div class="visual project"><span>Algorithms</span></div>
+      <div class="visual project">
+        <span>Algorithms</span>
+      </div>
+
       <div>
         <h3>ARC-AGI Solver</h3>
         <div class="meta">2025 · Python, reasoning algorithms</div>
-        <p>Built a solver for visual reasoning tasks and experimented with approaches to pattern recognition and grid transformations, achieving roughly 3× better partial correctness than heuristic baselines.</p>
+        <p>
+          Built a solver for visual reasoning tasks and experimented
+          with approaches to pattern recognition and grid transformations,
+          achieving roughly 3× better partial correctness than heuristic
+          baselines.
+        </p>
       </div>
     </article>
 
     <article class="entry">
-      <div class="visual project"><span>Web App</span></div>
+      <div class="visual project">
+        <span>Web App</span>
+      </div>
+
       <div>
         <h3>Atlanta Food Finder</h3>
         <div class="meta">2024 · Django, PostgreSQL, Google Maps API</div>
-        <p>Built a web application for discovering food spots around Atlanta, combining a Django backend with relational data and maps integration.</p>
+        <p>
+          Built a web application for discovering food spots around
+          Atlanta, combining a Django backend with relational data
+          and maps integration.
+        </p>
       </div>
     </article>
   </section>
 
+  <!-- LEADERSHIP -->
+
   <section id="leadership">
-    <div class="section-heading"><h2>Leadership &amp; Involvement</h2></div>
+    <div class="section-heading">
+      <h2>Leadership &amp; Involvement</h2>
+    </div>
 
     <article class="entry">
-      <div class="visual"><span>Startup<br>Exchange</span></div>
+      <div class="visual">
+        <span>Startup<br>Exchange</span>
+      </div>
+
       <div>
         <h3>Director of Community Growth · GT Startup Exchange</h3>
         <div class="meta">Georgia Tech · 2024–present</div>
-        <p>Help lead community-building efforts for Georgia Tech's entrepreneurship ecosystem, including mentoring more than 30 students and supporting events that bring aspiring founders together.</p>
+        <p>
+          Help lead community-building efforts for Georgia Tech's
+          entrepreneurship ecosystem, including mentoring more than
+          30 students and supporting events that bring aspiring
+          founders together.
+        </p>
       </div>
     </article>
 
     <article class="entry">
-      <div class="visual"><span>Equity<br>Research</span></div>
+      <div class="visual">
+        <span>Equity<br>Research</span>
+      </div>
+
       <div>
         <h3>Equity Research Team Lead</h3>
         <div class="meta">Georgia Tech · 2025</div>
-        <p>Led student equity research work involving company analysis and financial models, bringing together my interests in software, business, and financial markets.</p>
+        <p>
+          Led student equity research work involving company analysis
+          and financial models, bringing together my interests in
+          software, business, and financial markets.
+        </p>
       </div>
     </article>
   </section>
 
+  <!-- SKILLS -->
+
   <section id="skills">
-    <div class="section-heading"><h2>Technical Skills</h2></div>
+    <div class="section-heading">
+      <h2>Technical Skills</h2>
+    </div>
 
     <div class="skill-row">
       <strong>Languages</strong>
@@ -857,14 +822,22 @@ footer {
 
     <div class="skill-row">
       <strong>Tools &amp; frameworks</strong>
-      <div>Angular, Django, PostgreSQL, Docker, Git, GitLab CI/CD, Linux, Playwright, GoogleTest</div>
+      <div>
+        Angular, Django, PostgreSQL, Docker, Git,
+        GitLab CI/CD, Linux, Playwright, GoogleTest
+      </div>
     </div>
 
     <div class="skill-row">
       <strong>Interests</strong>
-      <div>Full-stack engineering, applied AI, developer tools, financial technology, data systems</div>
+      <div>
+        Full-stack engineering, applied AI, developer tools,
+        financial technology, data systems
+      </div>
     </div>
   </section>
+
+  <!-- FOOTER -->
 
   <footer>
     Last updated October 2026 · Built with HTML and CSS · Hosted on GitHub Pages
