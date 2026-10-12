@@ -4,62 +4,63 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Ocean Kafle — Computer Science at Georgia Tech. Software engineering, AI, and financial technology.">
+  <meta name="theme-color" content="#fdfdfb">
   <title>Ocean Kafle</title>
   <style>
-    :root { color-scheme: light; --ink:#242424; --muted:#5e6570; --link:#215f99; --line:#e3e7ec; --bg:#fff; }
-    * {box-sizing:border-box} html {scroll-behavior:smooth}
-    body {background:var(--bg); color:var(--ink); margin:0; font-family:Arial,Helvetica,sans-serif; font-size:15.5px; line-height:1.7;}
-    .wrap {max-width:850px; margin:0 auto; padding:58px 27px 85px;}
-    a {color:var(--link); text-decoration:none} a:hover {text-decoration:underline}
-    h1,h2,h3 {line-height:1.28; font-weight:600} h1 {font-size:31px; margin:0 0 18px;} h2 {font-size:22px; margin:56px 0 20px; border-bottom:1px solid var(--line); padding-bottom:10px;} h3 {font-size:18px; margin:0 0 5px;}
-    p {margin:0 0 13px;} .top {display:grid; grid-template-columns:minmax(0,1fr) 150px; gap:29px; align-items:start;}
-    .photo {width:150px; height:150px; border-radius:50%; object-fit:cover; border:1px solid var(--line); background:#f5f6f7;}
-    .photo-placeholder {width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#858d97;background:#f0f3f6;font-size:12px;text-align:center;padding:12px;}
-    .links {margin-top:20px} .links a {white-space:nowrap} .links span {color:#8d969f; margin:0 9px;}
-    nav {margin:32px 0 4px; font-size:14px; color:var(--muted)} nav a {margin-right:17px}
-    .entry {display:grid; grid-template-columns:145px minmax(0,1fr); gap:22px; padding:19px 0 24px; border-bottom:1px solid #eef0f3;} .entry:last-child {border-bottom:0}
-    .thumb {width:145px; height:105px; background:#f1f4f7; display:flex;align-items:center;justify-content:center; color:#697482; font-size:13px; font-weight:600; text-align:center; border-radius:3px; padding:12px; overflow:hidden;}
-    .thumb img {width:100%;height:100%;object-fit:cover;} .meta {font-size:14px;color:var(--muted);margin:2px 0 9px;} .entry p {margin-bottom:7px}
-    .tagline {color:var(--muted)} .skills strong {font-weight:600} footer {margin-top:55px; padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
-    @media(max-width:650px){.wrap{padding:34px 19px 60px}.top{grid-template-columns:1fr}.photo-placeholder,.photo{width:110px;height:110px;grid-row:1}.top{gap:18px}.entry{grid-template-columns:1fr;gap:10px}.thumb{width:100%;max-width:220px;height:100px}nav a{display:inline-block;margin-bottom:7px}.links span{margin:0 5px}}
+    :root{--ink:#1d2933;--muted:#62717c;--accent:#226b89;--accent-dark:#14516e;--light:#eaf4f6;--pink:#b85b82;--pink-soft:#faedf2;--pink-line:#edcdda;--rule:#e6ebec;--bg:#fdfdfb}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline;color:var(--accent-dark)}a:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
+    .container{max-width:950px;margin:0 auto;padding:76px 36px 90px}.intro{display:grid;grid-template-columns:minmax(0,1fr) 205px;align-items:center;gap:68px}
+    h1,h2,h3,p{margin-top:0}h1{font-weight:650;letter-spacing:-1.1px;font-size:37px;line-height:1.2;margin-bottom:16px}h1::after{content:"";display:block;width:43px;height:3px;background:var(--pink);border-radius:3px;margin-top:12px}h2{font-size:23px;letter-spacing:-.55px;font-weight:650;margin:0 0 23px}h3{font-size:17px;line-height:1.35;font-weight:650;margin:0 0 3px}p{margin-bottom:15px}.intro p{line-height:1.65}
+    .eyebrow{font-weight:700;color:var(--pink);font-size:11px;letter-spacing:1.9px;text-transform:uppercase;margin:0 0 13px}.avatar{width:205px;height:205px;border-radius:50%;object-fit:cover;background:#eaf2f2;border:5px solid white;box-shadow:0 0 0 1px var(--pink-line),0 7px 28px rgba(23,59,67,.07)}.avatar-placeholder{width:205px;height:205px;border-radius:50%;background:linear-gradient(145deg,#f9e8ef 0%,#e8eef4 58%,#dcebf0 100%);border:5px solid white;box-shadow:0 0 0 1px var(--pink-line),0 7px 28px rgba(23,59,67,.07);display:flex;align-items:center;justify-content:center;text-align:center;color:#698391;font-size:13px;padding:20px}
+    .links{display:flex;flex-wrap:wrap;gap:8px 0;align-items:center;margin-top:21px;font-size:15px}.links span{color:var(--pink);margin:0 12px}.links a{font-weight:550}
+    .nav{display:flex;gap:24px;flex-wrap:wrap;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:13px 0;margin:45px 0 0;font-size:13px;font-weight:650;letter-spacing:.15px}.nav a{color:var(--muted)}.nav a:hover{color:var(--accent)}
+    section{scroll-margin-top:28px;margin-top:66px}.section-heading{display:flex;align-items:center;gap:17px;margin-bottom:23px}.section-heading h2{margin:0;white-space:nowrap}.section-heading::after{content:"";height:1px;width:100%;background:linear-gradient(90deg,var(--pink-line),var(--rule) 65%)}
+    .entry{display:grid;grid-template-columns:155px minmax(0,1fr);gap:29px;padding:18px 0 30px;margin-bottom:8px}.visual{width:155px;height:108px;border:1px solid #e2e9e9;border-radius:7px;background:#f1f6f6;display:flex;align-items:center;justify-content:center;text-align:center;padding:15px;position:relative;overflow:hidden}.visual::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#85b1c2}.visual span{font-size:13px;letter-spacing:.1px;font-weight:650;color:#47687a}.visual.project{background:linear-gradient(145deg,#faedf2,#edf3f7)}.visual.project::before{background:var(--pink)}.visual img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+    .meta{color:var(--muted);font-size:13px;margin:4px 0 11px}.entry p{margin:0;font-size:15px;line-height:1.7}.intro-note{color:var(--muted);margin-top:-7px;margin-bottom:18px;font-size:15px}.skill-row{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:15px}.skill-row strong{font-weight:650}.skill-row:last-child{border-bottom:0}
+    footer{font-size:12px;color:#84929a;border-top:1px solid var(--rule);margin-top:65px;padding-top:17px}
+    @media(max-width:720px){.container{padding:43px 22px 65px}.intro{grid-template-columns:1fr;gap:24px}.avatar,.avatar-placeholder{grid-row:1;width:137px;height:137px}.intro h1{font-size:32px}.nav{gap:15px;margin-top:32px}section{margin-top:48px}.entry{grid-template-columns:1fr;gap:13px;padding-top:13px;padding-bottom:22px}.visual{width:155px;height:90px}.skill-row{grid-template-columns:1fr;gap:3px}.links span{margin:0 8px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
-<main class="wrap">
-  <header class="top">
+<main class="container">
+  <header class="intro">
     <div>
+      <div class="eyebrow">Software Engineering · AI · Financial Technology</div>
       <h1>Ocean Kafle</h1>
       <p>I'm a Computer Science student at <a href="https://www.gatech.edu/">Georgia Tech</a>, graduating in December 2026 with a focus on artificial intelligence and human-centered computing. I enjoy building software that makes complex problems easier to work with, especially where engineering meets finance, data, and AI.</p>
       <p>Previously, I was an Engineering Summer Analyst at <strong>Goldman Sachs</strong>, where I worked on the Marquee Atlas risk analysis platform, and a Software Engineering Intern at <strong>Lockheed Martin</strong>, where I worked on developer tooling, testing infrastructure, and data systems.</p>
-      <div class="links"><a href="mailto:oceankafle@gmail.com">Email</a><span>/</span><a href="https://github.com/oceankafle">GitHub</a><span>/</span><a href="https://www.linkedin.com/in/ocean-kafle/">LinkedIn</a><span>/</span><a href="Ocean_Kafle_Resume_2026.pdf">Resume</a></div>
+      <div class="links"><a href="mailto:oceankafle@gmail.com">Email</a><span>/</span><a href="https://github.com/oceankafle">GitHub</a><span>/</span><a href="https://www.linkedin.com/in/ocean-kafle/">LinkedIn</a><span>/</span><a href="Ocean_Kafle_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">Resume</a></div>
     </div>
-    <!-- Replace this placeholder with: <img class="photo" src="images/profile.jpg" alt="Portrait of Ocean Kafle"> -->
-    <div class="photo-placeholder" aria-label="Placeholder for a profile photo">Add your<br>profile photo</div>
+    <!-- To add your photo, replace the next div with: <img class="avatar" src="profile.jpg" alt="Portrait of Ocean Kafle"> -->
+    <div class="avatar-placeholder">Your photo here</div>
   </header>
-  <nav aria-label="Sections"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#leadership">Leadership</a><a href="#skills">Skills</a></nav>
+  <nav class="nav" aria-label="Page sections"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#leadership">Leadership</a><a href="#skills">Skills</a></nav>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <article class="entry"><div class="thumb">Goldman Sachs</div><div><h3>Engineering Summer Analyst · Goldman Sachs</h3><div class="meta">Dallas, TX · Summer 2026</div><p>Worked on <strong>Marquee Atlas</strong>, a platform for market risk analysis. Built an LLM-powered interface that converted natural-language requests into structured scenarios across rates, credit, FX, commodities, and inflation, reducing the manual steps needed to configure scenarios. Collaborated with quantitative strategists and wrote randomized Playwright tests to validate workflows.</p></div></article>
-    <article class="entry"><div class="thumb">Lockheed Martin</div><div><h3>Software Engineering Intern · Lockheed Martin</h3><div class="meta">Grand Prairie, TX · Summer 2025</div><p>Improved CI/CD workflows for embedded FPGA development using GitLab, reducing delivery time by 25%. Expanded automated tests with GoogleTest and CMake, increasing test coverage by 45%, and integrated static analysis into the development workflow.</p></div></article>
-    <article class="entry"><div class="thumb">Lockheed Martin</div><div><h3>Test Engineering Intern · Lockheed Martin</h3><div class="meta">Grand Prairie, TX · 2024</div><p>Built a C#/.NET asset tracking application, worked on an Access-to-PostgreSQL migration, and used Python and SQL to process more than one million time-series data points. Improved processing throughput by 35% and supported engineering analytics.</p></div></article>
+  <section id="experience"><div class="section-heading"><h2>Experience</h2></div>
+    <article class="entry"><div class="visual"><span>Goldman Sachs</span></div><div><h3>Engineering Summer Analyst · Goldman Sachs</h3><div class="meta">Dallas, TX · Summer 2026</div><p>Worked on <strong>Marquee Atlas</strong>, a platform for market risk analysis. Built an LLM-powered interface that converted natural-language requests into structured scenarios across rates, credit, FX, commodities, and inflation, reducing the manual steps needed to configure scenarios. Collaborated with quantitative strategists and wrote randomized Playwright tests to validate workflows.</p></div></article>
+    <article class="entry"><div class="visual"><span>Lockheed Martin</span></div><div><h3>Software Engineering Intern · Lockheed Martin</h3><div class="meta">Grand Prairie, TX · Summer 2025</div><p>Improved CI/CD workflows for embedded FPGA development using GitLab, reducing delivery time by 25%. Expanded automated tests with GoogleTest and CMake, increasing test coverage by 45%, and integrated static analysis into the development workflow.</p></div></article>
+    <article class="entry"><div class="visual"><span>Lockheed Martin</span></div><div><h3>Test Engineering Intern · Lockheed Martin</h3><div class="meta">Grand Prairie, TX · 2024</div><p>Built a C#/.NET asset tracking application, worked on an Access-to-PostgreSQL migration, and used Python and SQL to process more than one million time-series data points. Improved processing throughput by 35% and supported engineering analytics.</p></div></article>
   </section>
 
-  <section id="projects">
-    <h2>Selected Projects</h2>
-    <p class="tagline">A few things I've worked on outside of internships.</p>
-    <article class="entry"><div class="thumb">AI + Vision</div><div><h3>ARGUS Sensor: Agentic AI for Spatial Planning</h3><div class="meta">2026 · LLMs, VLMs, Azure OpenAI</div><p>Developed a system that uses language and vision models to turn user goals and floor plans into sensor placement plans, with a multi-stage reasoning pipeline and visualized outputs.</p><!-- Add verified project link here: <a href="...">code</a> / <a href="...">demo</a> --></div></article>
-    <article class="entry"><div class="thumb">Algorithms</div><div><h3>ARC-AGI Solver</h3><div class="meta">2025 · Python, reasoning algorithms</div><p>Built a solver for visual reasoning tasks and experimented with approaches to pattern recognition and grid transformations, achieving roughly 3× better partial correctness than heuristic baselines.</p></div></article>
-    <article class="entry"><div class="thumb">Web App</div><div><h3>Atlanta Food Finder</h3><div class="meta">2024 · Django, PostgreSQL, Google Maps API</div><p>Built a web application for discovering food spots around Atlanta, combining a Django backend with relational data and maps integration.</p></div></article>
+  <section id="projects"><div class="section-heading"><h2>Selected Projects</h2></div><p class="intro-note">A few things I've worked on outside of internships.</p>
+    <article class="entry"><div class="visual project"><span>AI + Vision</span></div><div><h3>ARGUS Sensor: Agentic AI for Spatial Planning</h3><div class="meta">2026 · LLMs, VLMs, Azure OpenAI</div><p>Developed a system that uses language and vision models to turn user goals and floor plans into sensor placement plans, with a multi-stage reasoning pipeline and visualized outputs.</p></div></article>
+    <article class="entry"><div class="visual project"><span>Algorithms</span></div><div><h3>ARC-AGI Solver</h3><div class="meta">2025 · Python, reasoning algorithms</div><p>Built a solver for visual reasoning tasks and experimented with approaches to pattern recognition and grid transformations, achieving roughly 3× better partial correctness than heuristic baselines.</p></div></article>
+    <article class="entry"><div class="visual project"><span>Web App</span></div><div><h3>Atlanta Food Finder</h3><div class="meta">2024 · Django, PostgreSQL, Google Maps API</div><p>Built a web application for discovering food spots around Atlanta, combining a Django backend with relational data and maps integration.</p></div></article>
   </section>
 
-  <section id="leadership"><h2>Leadership & Involvement</h2>
-    <article class="entry"><div class="thumb">Startup<br>Exchange</div><div><h3>Director of Community Growth · GT Startup Exchange</h3><div class="meta">Georgia Tech · 2024–present</div><p>Help lead community-building efforts for Georgia Tech's entrepreneurship ecosystem, including mentoring more than 30 students and supporting events that bring aspiring founders together.</p></div></article>
-    <article class="entry"><div class="thumb">Equity<br>Research</div><div><h3>Equity Research Team Lead</h3><div class="meta">Georgia Tech · 2025</div><p>Led student equity research work involving company analysis and financial models, bringing together my interests in software, business, and financial markets.</p></div></article>
+  <section id="leadership"><div class="section-heading"><h2>Leadership &amp; Involvement</h2></div>
+    <article class="entry"><div class="visual"><span>Startup<br>Exchange</span></div><div><h3>Director of Community Growth · GT Startup Exchange</h3><div class="meta">Georgia Tech · 2024–present</div><p>Help lead community-building efforts for Georgia Tech's entrepreneurship ecosystem, including mentoring more than 30 students and supporting events that bring aspiring founders together.</p></div></article>
+    <article class="entry"><div class="visual"><span>Equity<br>Research</span></div><div><h3>Equity Research Team Lead</h3><div class="meta">Georgia Tech · 2025</div><p>Led student equity research work involving company analysis and financial models, bringing together my interests in software, business, and financial markets.</p></div></article>
   </section>
 
-  <section id="skills"><h2>Technical Skills</h2><p class="skills"><strong>Languages:</strong> Python, Java, C++, C#, TypeScript/JavaScript, SQL</p><p class="skills"><strong>Tools & frameworks:</strong> Angular, Django, PostgreSQL, Docker, Git, GitLab CI/CD, Linux, Playwright, GoogleTest</p><p class="skills"><strong>Interests:</strong> Full-stack engineering, applied AI, developer tools, financial technology, data systems</p></section>
-  <footer>Last updated October 2026 · Built with plain HTML and CSS · Hosted with GitHub Pages</footer>
+  <section id="skills"><div class="section-heading"><h2>Technical Skills</h2></div>
+    <div class="skill-row"><strong>Languages</strong><div>Python, Java, C++, C#, TypeScript/JavaScript, SQL</div></div>
+    <div class="skill-row"><strong>Tools &amp; frameworks</strong><div>Angular, Django, PostgreSQL, Docker, Git, GitLab CI/CD, Linux, Playwright, GoogleTest</div></div>
+    <div class="skill-row"><strong>Interests</strong><div>Full-stack engineering, applied AI, developer tools, financial technology, data systems</div></div>
+  </section>
+  <footer>Last updated October 2026 · Built with HTML and CSS · Hosted on GitHub Pages</footer>
 </main>
 </body>
 </html>
