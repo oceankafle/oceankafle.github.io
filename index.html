@@ -21,6 +21,20 @@
     footer{font-size:12px;color:#84929a;border-top:1px solid var(--rule);margin-top:65px;padding-top:17px}
     @media(max-width:720px){.container{padding:43px 22px 65px}.intro{grid-template-columns:1fr;gap:24px}.avatar,.avatar-placeholder{grid-row:1;width:137px;height:137px}.intro h1{font-size:32px}.nav{gap:15px;margin-top:32px}section{margin-top:48px}.entry{grid-template-columns:1fr;gap:13px;padding-top:13px;padding-bottom:22px}.visual{width:155px;height:90px}.visual.company-logo{height:96px}.visual.company-logo.lockheed img{height:96px}.skill-row{grid-template-columns:1fr;gap:3px}.links span{margin:0 8px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+    /* Compact LinkedIn-inspired experience rows */
+    #experience .entry{display:grid;grid-template-columns:78px minmax(0,1fr);gap:20px;align-items:start;padding:22px 0 26px;margin:0;border-bottom:1px solid var(--rule)}
+    #experience .entry:last-child{border-bottom:0}
+    #experience .company-logo{width:78px;height:78px;min-width:78px;overflow:hidden;border:0;border-radius:9px;box-shadow:none;padding:0;display:flex;justify-content:center;align-items:center}
+    #experience .company-logo::before{display:none}
+    #experience .company-logo.goldman{background:#719bc6}
+    #experience .company-logo.goldman img{width:100%;height:100%;object-fit:cover;position:static;transform:none}
+    #experience .company-logo.lockheed{background:#f8fafc;border:1px solid #e5eaf0}
+    #experience .company-logo.lockheed img{width:100%;height:100%;object-fit:cover;position:static;transform:scale(1.35);transform-origin:center}
+    #experience h3{font-size:17px;line-height:1.4;margin-bottom:2px}
+    #experience .meta{font-size:13px;margin:0 0 10px;color:var(--muted)}
+    #experience .entry p{font-size:15px;line-height:1.65}
+    @media(max-width:720px){#experience .entry{grid-template-columns:64px minmax(0,1fr);gap:15px}#experience .company-logo{width:64px;height:64px;min-width:64px}}
   </style>
 </head>
 <body>
@@ -33,14 +47,14 @@
       <p>Previously, I was an Engineering Summer Analyst at <strong>Goldman Sachs</strong>, where I worked on the Marquee Atlas risk analysis platform, and a Software Engineering Intern at <strong>Lockheed Martin</strong>, where I worked on developer tooling, testing infrastructure, and data systems.</p>
       <div class="links"><a href="mailto:oceankafle@gmail.com">Email</a><span>/</span><a href="https://github.com/oceankafle">GitHub</a><span>/</span><a href="https://www.linkedin.com/in/ocean-kafle/">LinkedIn</a><span>/</span><a href="Ocean_Kafle_Resume_2026.pdf" target="_blank" rel="noopener noreferrer">Resume</a></div>
     </div>
-    <!-- To add your photo, replace the next div with: <img class="avatar" src="profile.jpg" alt="Portrait of Ocean Kafle"> -->
-    <img class="avatar" src="profile_linkedin.png" alt="Portrait of Ocean Kafle">  </header>
+    <img class="avatar" src="profile_linkedin.png" alt="Portrait of Ocean Kafle">
+  </header>
   <nav class="nav" aria-label="Page sections"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#leadership">Leadership</a><a href="#skills">Skills</a></nav>
 
   <section id="experience"><div class="section-heading"><h2>Experience</h2></div>
-    <article class="entry"><div class="visual company-logo goldman"><img src="goldman_logo.png" alt="Goldman Sachs logo" loading="lazy"></div><div><h3>Engineering Summer Analyst · Goldman Sachs</h3><div class="meta">Dallas, TX · Summer 2026</div><p>Worked on <strong>Marquee Atlas</strong>, a platform for market risk analysis. Built an LLM-powered interface that converted natural-language requests into structured scenarios across rates, credit, FX, commodities, and inflation, reducing the manual steps needed to configure scenarios. Collaborated with quantitative strategists and wrote randomized Playwright tests to validate workflows.</p></div></article>
-    <article class="entry"><div class="visual company-logo lockheed"><img src="lockheed_logo.png" alt="Lockheed Martin logo" loading="lazy"></div><div><h3>Software Engineering Intern · Lockheed Martin</h3><div class="meta">Grand Prairie, TX · Summer 2025</div><p>Improved CI/CD workflows for embedded FPGA development using GitLab, reducing delivery time by 25%. Expanded automated tests with GoogleTest and CMake, increasing test coverage by 45%, and integrated static analysis into the development workflow.</p></div></article>
-    <article class="entry"><div class="visual company-logo lockheed"><img src="lockheed_logo.png" alt="Lockheed Martin logo" loading="lazy"></div><div><h3>Test Engineering Intern · Lockheed Martin</h3><div class="meta">Grand Prairie, TX · 2024</div><p>Built a C#/.NET asset tracking application, worked on an Access-to-PostgreSQL migration, and used Python and SQL to process more than one million time-series data points. Improved processing throughput by 35% and supported engineering analytics.</p></div></article>
+    <article class="entry"><div class="company-logo goldman"><img src="goldman_logo.png" alt="Goldman Sachs logo" loading="lazy"></div><div><h3>Engineering Summer Analyst · Goldman Sachs</h3><div class="meta">Dallas, TX · Summer 2026</div><p>Worked on <strong>Marquee Atlas</strong>, a platform for market risk analysis. Built an LLM-powered interface that converted natural-language requests into structured scenarios across rates, credit, FX, commodities, and inflation, reducing the manual steps needed to configure scenarios. Collaborated with quantitative strategists and wrote randomized Playwright tests to validate workflows.</p></div></article>
+    <article class="entry"><div class="company-logo lockheed"><img src="lockheed_logo.png" alt="Lockheed Martin logo" loading="lazy"></div><div><h3>Software Engineering Intern · Lockheed Martin</h3><div class="meta">Grand Prairie, TX · Summer 2025</div><p>Improved CI/CD workflows for embedded FPGA development using GitLab, reducing delivery time by 25%. Expanded automated tests with GoogleTest and CMake, increasing test coverage by 45%, and integrated static analysis into the development workflow.</p></div></article>
+    <article class="entry"><div class="company-logo lockheed"><img src="lockheed_logo.png" alt="Lockheed Martin logo" loading="lazy"></div><div><h3>Test Engineering Intern · Lockheed Martin</h3><div class="meta">Grand Prairie, TX · 2024</div><p>Built a C#/.NET asset tracking application, worked on an Access-to-PostgreSQL migration, and used Python and SQL to process more than one million time-series data points. Improved processing throughput by 35% and supported engineering analytics.</p></div></article>
   </section>
 
   <section id="projects"><div class="section-heading"><h2>Selected Projects</h2></div><p class="intro-note">A few things I've worked on outside of internships.</p>
